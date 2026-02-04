@@ -15,8 +15,12 @@ public class RequestController {
         return "Hello "+name;
     }
 
-    @GetMapping()
+    @GetMapping("/details")
     public String details(@RequestParam String name, @RequestParam Integer age){
         return "Hello "+name+" "+age;
+    }
+    @GetMapping("/person")
+    public Person getPerson(){
+        return new Person("john", 587);
     }
 }
